@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta property="og:title" content="orderweb">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="orderweb description">
+    <meta property="og:image" content="../assets/images/og.jpg">
+    <title>orderweb</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-datepicker3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css"/>
+    <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+    <!-- Header -->
+    <div id="header">
+        <div class="inner">
+            <h1>
+                <a class="logo" href="#">
+                    <img src="../assets/images/logo.png" alt="">
+                </a>
+            </h1>
+
+            <div class="user-info">
+                <div class="name-area">
+                    <dl>
+                        <dt>Company ID</dt>
+                        <dd>tajicecream</dd>
+                    </dl>
+                    <dl>
+                        <dt>Store</dt>
+                        <dd>LA Branch</dd>
+                    </dl>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn btn-primary btn-sm col-md-6">Password</button>
+                    <button type="button" class="btn btn-secondary btn-sm col-md-6">Logout</button>
+                </div>
+            </div>
+
+            <div class="gnb">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCompanyInfo"><i class='fas fa-exclamation-circle'></i>Company Info.</a>
+                        <ul id="gnbCompanyInfo" class="collapse">
+                            <li><a href="#">Store</a></li>
+                            <li><a href="#">Store General</a></li>
+                            <li><a href="#">Station</a></li>
+                            <li><a href="#">Department</a></li>
+                            <li><a href="#">Employee</a></li>
+                            <li><a href="#">Emp. Clock In-Out</a></li>
+                            <li><a href="#">Cash InOut Reason</a></li>
+                            <li><a href="#">Partner App</a></li>
+                            <li><a href="#">Discount Button</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbMenu"><i class='fas fa-clipboard-list'></i>Menu</a>
+                        <ul id="gnbMenu" class="collapse">
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Gift Card</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCustomer"><i class='far fa-user'></i>Customer</a>
+                        <ul id="gnbCustomer" class="collapse">
+                            <li><a href="#">Member</a></li>
+                            <li><a href="#">Memo Selection</a></li>
+                            <li><a href="#">Member Birthday</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbOnlineOrder"><i class='fas fa-laptop'></i>Online Order</a>
+                        <ul id="gnbOnlineOrder" class="collapse">
+                            <li><a href="#">In-Store Order</a></li>
+                            <li><a href="#">To Go Order</a></li>
+                            <li><a href="#">Delivery Order</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCoupon"><i class='fas fa-tag'></i>Coupon</a>
+                        <ul id="gnbCoupon" class="collapse">
+                            <li><a href="#">Coupon</a></li>
+                            <li><a href="#">Issue History</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbMailing"><i class='far fa-envelope'></i>Mailing</a>
+                        <ul id="gnbMailing" class="collapse">
+                            <li><a href="#">Member Mailing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbReport"><i class='far fa-clipboard'></i>Report</a>
+                        <ul id="gnbReport" class="collapse">
+                            <li><a href="#">Report by Period</a></li>
+                            <li><a href="#">Summary</a></li>
+                            <li><a href="#">Sales by</a></li>
+                            <li><a href="#">Clock In-Out</a></li>
+                            <li><a href="#">Gift Card</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div id="container" class="company store">
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <p>Last Login Date : 04-28-2019 00:49:14 AM</p>
+    </div>
+
+</div>
+
+</body>
+</html>

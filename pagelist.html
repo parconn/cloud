@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:image" content="img/og_zp.jpg" />
+    <meta property="og:description" content="의뢰 결과를 확인하고 피드백 부탁드립니다."/>
+    <title>navyzebra 작업리스트</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+        *,
+        *:before,
+        *:after {box-sizing:border-box}
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1.5;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+        input{
+            border-radius: 0;
+        }
+        body{overflow-x:auto;min-width:1300px;font-size:14px;font-family: 'Lato', sans-serif}
+        a {text-decoration:none}
+        table caption{display:none}
+
+        /* Header */
+        #header {position:fixed;top:0;left:0;z-index:10;width:100%}
+        #header .head {position:relative;z-index:20;height:45px;background: linear-gradient(#8a98b8, #8190b2);border-top:1px solid #8591ad;border-bottom:1px solid #7885a5;box-shadow:0 0 10px #697592}
+        #gnb {position:fixed;top:0;left:0;z-index:10;width:165px;height:100%;padding:80px 0;background:#727e9e;color:#d2d6e2}
+        #gnb h2 {margin-bottom:20px;padding:0 20px;font-size:13px;color:#adb7d0}
+        #gnb ul{border-top:1px solid #5f6a83}
+        #gnb ul li a {display:block;padding:10px 20px 10px 20px;background:url('/img/icon_nav.jpg') no-repeat 15px -114px;border-top:1px solid #7f8db1;border-bottom:1px solid #5f6a83;font-size:12px;font-weight:700}
+        #gnb ul li a:hover {background: linear-gradient(#74bbf3, #5facf1);border-top:1px solid #87c5f5;border-bottom:1px solid #6388b6;}
+
+        /* Container */
+        #container {overflow:hidden;position:relative;margin: 45px 0 0 165px}
+        #container table {margin-bottom:200px;width:100%}
+        #container table thead tr th {position:relative;padding:10px 0;background: linear-gradient(#f0f3f9, #e9edf6);border-top:1px solid #d7e0e9;border-bottom:1px solid
+        #d3dce6;font-size:13px;color:#9198ac;font-weight:700;}
+        #container table thead tr th:after {content:"";position:absolute;bottom:0;left:0;width:1px;height:60%;background:#d3dce6;}
+        #container table tbody tr{transition:.3s ease-in-out}
+        #container table tbody tr td {padding:20px;font-size:13px;color:#969eb0;text-align:center;border:1px solid #dfe6ea;font-weight:700;vertical-align:middle;}
+        #container table tbody tr td a {display:inline-block;padding:5px 10px;background:#5b6274;border-radius:3px;color:#FFF;transition:.3s ease-in-out}
+        #container table tbody tr td a:hover {background:#79839a}
+
+        @media only screen and (max-width:600px) {
+            #gnb{display:none;width:100%;height:45px;}
+            #gnb h2{display:none;}
+            #container{margin:55px 15px 0;}
+            #container table tbody tr td{font-size:10px;}
+        }
+    </style>
+
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <div class="head">
+            <h1></h1>
+        </div>
+
+        <div id="gnb">
+            <h2>Navigation</h2>
+
+            <ul>
+                <li class="pro"><a href="#">Project</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="container">
+        <table>
+            <caption>페이지 리스트</caption>
+            <colgroup>
+                <col width="34%">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+                <col width="12.5%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>프로젝트 명</th>
+                <th>depth1</th>
+                <th>depth2</th>
+                <th>depth3</th>
+                <th>링크</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="64">nzqsrcloud</td>
+                <td rowspan="2">Login</td>
+                <td>Step1</td>
+                <td></td>
+                <td></td>
+            </tr>
+			<tr>
+                <td>Step2</td>
+                <td></td>
+                <td></td>
+            </tr>
+			<tr>
+                <td>Dashboard</td>
+                <td></td>
+                <td></td>
+                <td><a href="index.html" target="_blank">바로 가기</a></td>
+            </tr>
+            <tr>
+                <td rowspan="16">Company Info.</td>
+                <td>Store</td>
+                <td></td>
+                <td><a href="company/store.html" target="_blank">바로 가기</a></td>
+            </tr>
+            <tr>
+                <td>Store Information</td>
+                <td></td>
+                <td><a href="company/store_information.html" target="_blank">바로 가기</a></td>
+            </tr>
+            <tr>
+                <td>Store General</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Store General Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Station List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Station Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Department List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Department Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Employee List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Employee Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cash InOut Reason</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cash InOut Reason - Add</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Partner App</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Partner App - Add</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Discount Button</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Discount Button - Add</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="12">Menu</td>
+                <td>Category / Food</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Food</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Food(s) Copy</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Copy Food</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product Inventory</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Copy Product</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Gift Card List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Gift Card Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Copy Gift Card</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="5">Menu</td>
+                <td>Member List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Member Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Member Memo Selection</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Member Memo Selection Copy</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Member Birthday</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Online Order</td>
+                <td>Online Orders (In Store)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Online Orders (To Go)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Online Orders (Delivery)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="4">Coupon</td>
+                <td>Coupon List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Coupon Information</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Coupon Send/History</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Coupon Issue List</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mailing</td>
+                <td>Member Mailing</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="20">Report</td>
+                <td rowspan="4">Report by Period</td>
+                <td>Daily Report</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Monthly Report</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Quarterly Report</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Yearly Report</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="9">Summary</td>
+                <td>Daily Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sales Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Void Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Refund Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Payment Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Card Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Other Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>DC/Extra Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Coupon Summary</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="4">Sales by</td>
+                <td>Employee</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Customer</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Clock In-Out</td>
+                <td>Employee</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Gift Card</td>
+                <td>Purchase History</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Redeemption History</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer">
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta property="og:title" content="orderweb">
+<meta property="og:type" content="website">
+<meta property="og:description" content="orderweb description">
+<meta property="og:image" content="images/og.jpg">
+<title>orderweb</title>
+<link rel="shortcut icon" href="assets/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker3.min.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/common.css"/>
+<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+</head>
+<body>
+
+<div id="wrap">
+
+	<!-- Header -->
+	<div id="header">
+		<div class="inner">
+			<h1>
+				<a class="logo" href="#">
+					<img src="assets/images/logo.png" alt="">
+				</a>
+			</h1>
+
+			<div class="user-info">
+				<div class="name-area">
+					<dl>
+						<dt>Company ID</dt>
+						<dd>tajicecream</dd>
+					</dl>
+					<dl>
+						<dt>Store</dt>
+						<dd>LA Branch</dd>
+					</dl>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="btn btn-primary btn-sm col-md-6">Password</button>
+					<button type="button" class="btn btn-secondary btn-sm col-md-6">Logout</button>
+				</div>
+			</div>
+
+			<div class="gnb">
+				<ul>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCompanyInfo"><i class='fas fa-exclamation-circle'></i>Company Info.</a>
+						<ul id="gnbCompanyInfo" class="collapse">
+							<li><a href="#">Store</a></li>
+							<li><a href="#">Store General</a></li>
+							<li><a href="#">Station</a></li>
+							<li><a href="#">Department</a></li>
+							<li><a href="#">Employee</a></li>
+							<li><a href="#">Emp. Clock In-Out</a></li>
+							<li><a href="#">Cash InOut Reason</a></li>
+							<li><a href="#">Partner App</a></li>
+							<li><a href="#">Discount Button</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbMenu"><i class='fas fa-clipboard-list'></i>Menu</a>
+						<ul id="gnbMenu" class="collapse">
+							<li><a href="#">Food</a></li>
+							<li><a href="#">Product</a></li>
+							<li><a href="#">Gift Card</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCustomer"><i class='far fa-user'></i>Customer</a>
+						<ul id="gnbCustomer" class="collapse">
+							<li><a href="#">Member</a></li>
+							<li><a href="#">Memo Selection</a></li>
+							<li><a href="#">Member Birthday</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbOnlineOrder"><i class='fas fa-laptop'></i>Online Order</a>
+						<ul id="gnbOnlineOrder" class="collapse">
+							<li><a href="#">In-Store Order</a></li>
+							<li><a href="#">To Go Order</a></li>
+							<li><a href="#">Delivery Order</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbCoupon"><i class='fas fa-tag'></i>Coupon</a>
+						<ul id="gnbCoupon" class="collapse">
+							<li><a href="#">Coupon</a></li>
+							<li><a href="#">Issue History</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbMailing"><i class='far fa-envelope'></i>Mailing</a>
+						<ul id="gnbMailing" class="collapse">
+							<li><a href="#">Member Mailing</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0);" class="dep1" data-toggle="collapse" data-target="#gnbReport"><i class='far fa-clipboard'></i>Report</a>
+						<ul id="gnbReport" class="collapse">
+							<li><a href="#">Report by Period</a></li>
+							<li><a href="#">Summary</a></li>
+							<li><a href="#">Sales by</a></li>
+							<li><a href="#">Clock In-Out</a></li>
+							<li><a href="#">Gift Card</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<!-- Container -->
+	<div id="container" class="main">
+		<div class="sort-area">
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title">Search</h5>
+					<h6 class="card-subtitle text-muted">APRIL 21 2019 ~ APRIL 27 2019</h6>
+				</div>
+				<div class="card-body">
+
+					<div class="form-inline">
+						<label class="mr-sm-2">station.</label>
+						<select class="custom-select mr-sm-2">
+							<option value="">All Station</option>
+							<option value="">Station01</option>
+							<option value="">Station02</option>
+							<option value="">Station03 - Youngsoo</option>
+							<option value="">Station04 - TAE</option>
+							<option value="">Station05</option>
+							<option value="">Station06 - 본사 Clover</option>
+							<option value="">Station07 - 지훈이</option>
+						</select>
+
+						<div class="input-daterange input-group mr-sm-2" id="datepicker">
+							<input type="text" class="input-sm form-control" name="start" value="04/21/2019" />
+							<span class="input-group-addon">to</span>
+							<input type="text" class="input-sm form-control" name="end" value="04/27/2019" />
+						</div>
+						<script type="text/javascript">
+                            $(function () {
+                                $('.input-daterange').datepicker();
+                            });
+						</script>
+
+						<button type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section row">
+			<div class="col-xl-6">
+				<div id="salesSummary" class="card"></div>
+				<script type="text/javascript">
+                    Highcharts.chart('salesSummary', {
+                        chart: {
+                            type: 'bar'
+                        },
+                        title: {
+                            text: 'SALES SUMMARY'
+                        },
+                        subtitle: {
+                            text: 'By Category'
+                        },
+                        xAxis: {
+                            categories: ['LA Branch'],
+                            title: {
+                                text: null
+                            }
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'US Dollar ($)',
+                                align: 'high'
+                            },
+                            labels: {
+                                overflow: 'justify'
+                            }
+                        },
+                        tooltip: {
+                            valueSuffix: 'millions'
+                        },
+                        plotOptions: {
+                            bar: {
+                                dataLabels: {
+                                    enabled: true
+                                }
+                            }
+                        },
+                        legend: {
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'top',
+                            x: -40,
+                            y: 0,
+                            floating: true,
+                            borderWidth: 1,
+                            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                            shadow: true
+                        },
+                        credits: {
+                            enabled: false
+                        },
+                        series: [{
+                            name: 'FOOD',
+                            data: [2105.5]
+                        }, {
+                            name: 'PRODUCT',
+                            data: [0]
+                        }, {
+                            name: 'GIFT CARD',
+                            data: [0]
+                        }, {
+                            name: 'ONLINE',
+                            data: [0]
+                        }, {
+                            name: 'TOTAL',
+                            data: [2105.5]
+                        }]
+                    });
+				</script>
+			</div>
+
+			<div class="col-xl-6">
+				<div id="paymentSummary" class="card"></div>
+				<script type="text/javascript">
+                    Highcharts.chart('paymentSummary', {
+                        chart: {
+                            type: 'bar'
+                        },
+                        title: {
+                            text: 'PAYMENT SUMMARY'
+                        },
+                        xAxis: {
+                            categories: ['LA Branch']
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: ''
+                            }
+                        },
+                        legend: {
+                            reversed: true
+                        },
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal'
+                            }
+                        },
+                        series: [{
+                            name: 'CASH(+TOPS)',
+                            data: [2339.76]
+                        }, {
+                            name: 'CREDIT CARD(+TIPS)',
+                            data: [0]
+                        }, {
+                            name: 'GIFT CARD',
+                            data: [0]
+                        }, {
+                            name: 'POINT',
+                            data: [0]
+                        }, {
+                            name: 'OTHER',
+                            data: [0]
+                        }]
+                    });
+				</script>
+			</div>
+		</div>
+
+		<div class="section row">
+			<div class="col-xl-6">
+				<div id="salesByTime" class="card"></div>
+				<script type="text/javascript">
+                    Highcharts.chart('salesByTime', {
+                        chart: {
+                            type: 'line'
+                        },
+                        title: {
+                            text: 'SALES BY TIME'
+                        },
+                        subtitle: {
+                            text: '04.22.2019 ~ 04.28.2019'
+                        },
+                        xAxis: {
+                            categories: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24']
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'US Dollar ($)'
+                            }
+                        },
+                        plotOptions: {
+                            line: {
+                                dataLabels: {
+                                    enabled: true
+                                },
+                                enableMouseTracking: false
+                            }
+                        },
+                        series: [{
+                            name: '',
+                            data: [0,0,0,0,0,0,0,0,0,0,0,146.48,0,29.92,58.57,105.2,168.76,554.57,503.05,0,228.9,65.71,0,0]
+                        }]
+                    });
+				</script>
+			</div>
+
+			<div class="col-xl-6">
+				<div id="salesTopTen" class="card"></div>
+				<script type="text/javascript">
+                    Highcharts.chart('salesTopTen', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false,
+                            type: 'pie'
+                        },
+                        title: {
+                            text: 'SALES TOP 10'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true,
+                                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                    style: {
+                                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                    }
+                                }
+                            }
+                        },
+                        series: [{
+                            name: 'Brands',
+                            colorByPoint: true,
+                            data: [{
+                                name: 'HONEY HIBISCUS',
+                                y: 61.41
+                            }, {
+                                name: 'S-1 MILK JJJ COW GOOD MILK',
+                                y: 11.84
+                            }, {
+                                name: '01 DARLING ICE CREAM',
+                                y: 10.85
+                            }, {
+                                name: '02 SWEETIE ICE CREAM',
+                                y: 4.67
+                            }, {
+                                name: '09 WAFFLE CONE',
+                                y: 4.18
+                            }, {
+                                name: '07 HONEY MEE ICE CREAM',
+                                y: 1.64
+                            }, {
+                                name: '08 SWEETIE',
+                                y: 1.6
+                            }, {
+                                name: 'TEST PRINT 01  MULTI LINE 1  MULTI LINE 2',
+                                y: 1.2
+                            }, {
+                                name: 'S-8 STRAWBERRY',
+                                y: 2.61
+                            }]
+                        }]
+                    });
+				</script>
+			</div>
+		</div>
+
+		<div class="section row">
+			<div class="col-xl-12">
+				<div id="orderBrakes" class="card"></div>
+				<script type="text/javascript">
+                    Highcharts.chart('orderBrakes', {
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: 0,
+                            plotShadow: false
+                        },
+                        title: {
+                            text: 'ORDER BRAKES',
+                            align: 'center',
+                            verticalAlign: 'middle',
+                            y: 40
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                        },
+                        plotOptions: {
+                            pie: {
+                                dataLabels: {
+                                    enabled: true,
+                                    distance: -50,
+                                    style: {
+                                        fontWeight: 'bold',
+                                        color: 'white'
+                                    }
+                                },
+                                startAngle: -90,
+                                endAngle: 90,
+                                center: ['50%', '75%'],
+                                size: '110%'
+                            }
+                        },
+                        series: [{
+                            type: 'pie',
+                            name: 'Browser share',
+                            innerSize: '50%',
+                            data: [
+                                ['HERE', 60],
+                                ['TOGO', 1]
+                            ]
+                        }]
+                    });
+
+				</script>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+		<p>Last Login Date : 04-28-2019 00:49:14 AM</p>
+	</div>
+
+</div>
+
+</body>
+</html>
